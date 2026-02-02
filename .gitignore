@@ -1,0 +1,92 @@
+# ===============================
+# Node & NPM
+# ===============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===============================
+# Playwright
+# ===============================
+.playwright/
+playwright-report/
+test-results/
+blob-report/
+allure-results/
+allure-report/
+
+# ===============================
+# Environment files
+# ===============================
+.env
+.env.*
+!.env.example
+
+# ===============================
+# OS generated files
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Node & NPM
+# ===============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===============================
+# Playwright
+# ===============================
+.playwright/
+playwright-report/
+test-results/
+blob-report/
+allure-results/
+allure-report/
+
+# ===============================
+# Environment files
+# ===============================
+.env
+.env.*
+!.env.example
+
+# ===============================
+# OS generated files
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# IDE / Editor
+# ===============================
+.vscode/
+.idea/
+*.iml
+
+# ===============================
+# Logs
+# ===============================
+logs/
+*.log
+
+# ===============================
+# Coverage
+# ===============================
+coverage/
+
+# ===============================
+# Build / Cache
+# ===============================
+dist/
+build/
+.cache/
+
+# ===============================
+# Temporary files
+# ===============================
+tmp/
+temp/
