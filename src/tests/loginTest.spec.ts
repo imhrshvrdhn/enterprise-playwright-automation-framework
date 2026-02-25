@@ -1,5 +1,8 @@
 import { test, expect } from '@playwright/test';
 import LoginPage from "../pages/loginPage";
+import { encrypt } from '../utils/CryptoUtil';
+import { decrypt } from '../utils/CryptoUtil';
+import { encryptEnvFile } from '../utils/EncryptEnvFile';
 
 
 test('test', async ({ page }) => {
@@ -7,10 +10,22 @@ test('test', async ({ page }) => {
 
   await loginPage.navigateToLoginPage();
 
-  await loginPage.fillUserName("harsh.vardhan.8e983a9d4c07@agentforce.com");
+  await loginPage.fillUserName(decrypt(process.env.userid!));
 
-  await loginPage.fillPassword("");
+  await loginPage.fillPassword(decrypt(process.env.password!));
 
   const homePage = await loginPage.clickLoginButton();
   await homePage.expectServiceTitleToBeVisible();
 });
+
+test.skip("sample env test encryption & decryption", async({page})=>{
+  // const plaintext = 'Hello Mars!';
+  // const encryptedText = encrypt(plaintext);
+  // console.log('SALT: ', process.env.SALT);
+  // console.log('Encrypted: ', encryptedText);
+  // const decryptText = decrypt(encryptedText);
+  // console.log(decryptText);
+  encryptEnvFile();
+
+})
+
